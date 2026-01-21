@@ -954,6 +954,13 @@ body {
                 height: auto;
                 aspect-ratio: 2/3;
             }
+            .card .overlay {
+                display: none !important; 
+            }
+
+            .card:hover {
+                transform: none !important; 
+            }
 
             .detail-content-wrapper {
                 width: 100%;
@@ -988,6 +995,13 @@ body {
                 padding: 10px 15px;
                 background: #000;
                 position: relative;
+            }
+            .card .overlay {
+                display: none !important; 
+            }
+
+            .card:hover {
+                transform: none !important; 
             }
 
             .navbar-links {
@@ -1129,4 +1143,5 @@ body {
             .season-selector-wrapper, .season-select {
                 width: 100%;
             }
+
         }
