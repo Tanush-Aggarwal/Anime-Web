@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Webs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- ===== navbar ===== -->
+    <nav class="navbar">
+        <div class="navbar-logo" id="logoHome" onclick="goHome()">ANIME WEBS</div>
+        <div class="navbar-links">
+            <a href="#" class="active" onclick="goPopular()">Popular</a>
+            <a href="#" onclick="goNew()">New</a>
+            <a href="#" onclick="goCategories()">Categories</a>
+        </div>
+        <div class="navbar-search">
+    <div class="search-container">
+        <input type="text" id="navbarSearch" placeholder="Search anime..." autocomplete="off">
+        <div id="searchDropdown" class="search-dropdown"></div>
+    </div>
+</div>
+    </nav>
+
+    <!-- Home View -->
+    <section class="view active home-view" id="homeView">
+        <header class="hero" id="heroSlider">
+            <div class="hero-fade"></div>
+        </header>
+
+
+        <h2>Trending Trailers</h2>
+        <div class="gallery-wrapper">
+            <div class="gallery" id="gallery"></div>
+        </div>
+    </section>
+
+    <!-- Popular Page -->
+    <section class="view popular-view" id="popularView">
+        <div class="popular-header">
+            <h1>Most Popular Anime</h1>
+        </div>
+        <div class="gallery-wrapper">
+            <div class="gallery" id="popularGallery"></div>
+        </div>
+    </section>
+
+    <!-- New Page -->
+    <section class="view new-view" id="newView">
+        <div class="popular-header">
+            <h1>New & Trending Anime</h1>
+        </div>
+        <div class="gallery-wrapper">
+            <div class="gallery" id="newGallery"></div>
+        </div>
+    </section>
+
+    <!-- Categories Page -->
+    <section class="view categories-view" id="categoriesView">
+        <div class="popular-header">
+            <h1>Browse by Category</h1>
+        </div>
+
+        <div class="genre-tags-container" id="genreTags">
+        </div>
+
+        <div class="category-rows-container" id="categoryRows">
+        </div>
+    </section>
+
+    <section class="view" id="filteredView">
+        <div class="popular-header">
+            <h1 id="filteredTitle">Category Name</h1>
+        </div>
+        <div class="gallery-wrapper">
+            <div class="gallery" id="filteredGallery"></div>
+        </div>
+    </section>
+
+
+    <!-- Detail View -->
+    <div class="view detail-view" id="detailView">
+        <div class="detail-hero-bg" id="detailHeroBg"></div>
+        <div class="detail-content-wrapper">
+            <div class="detail-poster-section">
+                <img id="detailPosterImg" class="detail-poster-img" src="" alt="Anime Poster">
+            </div>
+
+            <!-- Main Content Section (Trailer + Details) -->
+            <div style="flex: 1; min-width: 0;">
+                <div class="detail-trailer-container">
+                    <div class="detail-player-wrapper">
+                        <iframe id="detailYoutubePlayer" width="100%" height="100%" src="" frameborder="0"
+                            allowfullscreen="" allow="autoplay; encrypted-media" loading="lazy"></iframe>
+                    </div>
+                </div>
+
+                <!-- Anime Details Section -->
+                <div class="detail-anime-details">
+                    <h1 class="detail-anime-title" id="detailTitle">Anime Title</h1>
+
+                    <div class="detail-anime-meta">
+                        <div class="detail-meta-item">
+                            <span>Episodes:</span>
+                            <strong id="detailEpisodes">0</strong>
+                        </div>
+                        <div class="detail-meta-item">
+                            <span>Studio:</span>
+                            <strong id="detailStudio">Studio</strong>
+                        </div>
+                        <div class="detail-meta-item">
+                            <span>Genre:</span>
+                            <strong id="detailGenre">Genre</strong>
+                        </div>
+                        <div class="detail-meta-item detail-rating-display">
+                            <span class="detail-stars" id="detailStars">★★★★★</span>
+                            <strong id="detailRating">4.8</strong>
+                        </div>
+                    </div>
+
+                    <div class="detail-anime-synopsis" id="detailSynopsis">
+                        Anime synopsis will appear here...
+                    </div>
+
+                    <div class="detail-anime-actions">
+                        <button id="watchNowBtn" class="detail-action-btn primary">▶️
+                            Watch Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+</body>
+
+</html>
